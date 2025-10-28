@@ -1,1 +1,19 @@
-# javascript-lotto-precourse
+
+
+# InputView
+- 로또 구입금액 입력
+- 당첨번호 입력
+- 보너스 번호 입력
+# OutputView
+- 당첨통계 출력
+# Validator
+- 로또 구입금액이 1000원단위로 나누어 떨어지는지
+- 로또 숫자 범위가 1~45인지
+- 로또 숫자에 중복이 있는지
+# Lotto
+- 당첨번호 6개 
+# Lottos
+- 로또 갯수
+- 당첨번호
+- 당첨결과
+- 
