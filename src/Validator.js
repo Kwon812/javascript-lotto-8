@@ -10,7 +10,7 @@ export default class Validator{
         if(number<1 || number>45){
             throw ('[ERROR] 보너스번호는 1 이상 45이하여야 합니다')
         }
-        if(winLotto.getNumbers().includes(number)){
+        if(winLotto.numbers.includes(number)){
             throw ('[ERROR] 보너스번호는 당첨번호와 중복될 수 없습니다')
         }
     }

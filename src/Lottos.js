@@ -15,8 +15,8 @@ export default class Lottos {
     }
 
     _checkLotto(lotto){
-        const winLottoNumbersArr=this.#winLotto.getNumbers()
-        const lottoNumbersArr=lotto.getNumbers()
+        const winLottoNumbersArr=this.#winLotto.numbers
+        const lottoNumbersArr=lotto.numbers
         const winCount=winLottoNumbersArr.filter(number=>lottoNumbersArr.includes(number)).length
         if(winCount===5 && lottoNumbersArr.includes(this.#bonusNumber)){
             return -1

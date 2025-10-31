@@ -24,7 +24,7 @@ describe("로또 클래스 테스트", () => {
   describe('기능테스트',()=>{
     test("getNumbers 테스트", () => {
       const lotto=new Lotto([1,2,3,4,5,6])
-      expect(lotto.getNumbers()).toEqual([1,2,3,4,5,6])
+      expect(lotto.numbers).toEqual([1,2,3,4,5,6])
     });
   })
 

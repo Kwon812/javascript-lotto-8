@@ -6,7 +6,7 @@ export default class OutputView {
     printLottos(lottos){
         Console.print(`${lottos.length}개를 구매했습니다.`)
         lottos.forEach(lotto => {
-            Console.print(`[${lotto.getNumbers().join(', ')}]`)
+            Console.print(`[${lotto.numbers.join(', ')}]`)
             // Console.print(`[${lotto.getNumbers().toString()}]`)
         })
     }
