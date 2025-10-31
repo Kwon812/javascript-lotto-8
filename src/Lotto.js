@@ -14,6 +14,9 @@ class Lotto {
     if (!isValidNumbers) {
       throw new Error('[ERROR] 로또 번호는 1이상 45 이하여야 합니다')
     }
+    if(new Set(numbers).size!==numbers.length){
+      throw new Error('[ERROR] 로또 번호는 중복될 수 없습니다')
+    }
   }
 
   // TODO: 추가 기능 구현
