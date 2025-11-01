@@ -1,1 +1,0 @@
-            console.log( ((15000 /3000) * 100).toFixed(1))

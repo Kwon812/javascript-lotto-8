@@ -1,6 +1,7 @@
 import InputView from "./InputView.js";
 import Lottos from "./Lottos.js";
 import OutputView from "./OutputView.js";
+import LottoMachine from "./LottoMachine.js";
 
 class App {
 
@@ -12,16 +13,17 @@ class App {
 
     async run() {
         const buyPrice = await this.inputView.askBuyPrice()
+
         const userLottos=Lottos.initLottosByPrice(buyPrice)
-        this.outputView.printLottos(userLottos)
+        this.outputView.printLottos(userLottos.lottos)
 
         const winLotto=await this.inputView.askWinNumbers()
         const bonusNumber=await this.inputView.askBonusNumber(winLotto)
 
-        const lottos=new Lottos(winLotto,bonusNumber,userLottos)
+        const lottoGame=new LottoMachine(winLotto,bonusNumber,userLottos)
 
-        const winners=lottos.winners()
-        const profit=Lottos.profit(buyPrice,winners)
+        const winners=lottoGame.winners()
+        const profit=LottoMachine.profit(buyPrice,winners)
         this.outputView.printWinners(winners,profit)
     }
 }
