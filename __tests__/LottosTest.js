@@ -6,9 +6,9 @@ import LottoMachine from "../src/LottoMachine.js";
 
 describe("Lottos Class Test", () => {
 
-    test('가격 금액별 로또 출력 테스트 ',()=>{
+    test('generateLootosByPrice 메서드 테스트 ',()=>{
 
-        const lottos=Lottos.initLottosByPrice(4000).lottos
+        const lottos=Lottos.generateLottosByPrice(4000).lottos
         expect(lottos.length).toBe(4)
         expect(lottos[0]).toBeInstanceOf(Lotto)
 

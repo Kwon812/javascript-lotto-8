@@ -11,7 +11,7 @@ export default class Lottos {
     }
 
 
-    static initLottosByPrice(price) {
+    static generateLottosByPrice(price) {
         const count = price / 1000
         const lottos = []
         for (let i = 0; i < count; i++) {

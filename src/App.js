@@ -14,7 +14,7 @@ class App {
     async run() {
         const buyPrice = await this.inputView.askBuyPrice()
 
-        const userLottos=Lottos.initLottosByPrice(buyPrice)
+        const userLottos=Lottos.generateLottosByPrice(buyPrice)
         this.outputView.printLottos(userLottos.lottos)
 
         const winLotto=await this.inputView.askWinNumbers()

@@ -7,14 +7,14 @@ describe('LottoMachine Class Test',()=>{
 
     test('로또 당첨 테스트  ',()=>{
 
-        Lottos.initLottosByPrice=jest.fn(()=>{
+        Lottos.generateLottosByPrice=jest.fn(()=>{
             return (new Lottos([
                 new Lotto([1,2,3,4,5,6]),
                 new Lotto([1,2,3,4,5,23]),
                 new Lotto([1,2,3,4,5,12])
             ]))
         })
-        const lottos=Lottos.initLottosByPrice(3000)
+        const lottos=Lottos.generateLottosByPrice(3000)
         const winLotto=new Lotto([1,2,3,4,5,6])
         const bonus=12
         const ls=new LottoMachine(winLotto,bonus,lottos)
