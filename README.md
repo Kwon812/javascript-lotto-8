@@ -16,5 +16,7 @@
 # Lottos
 - Lotto class 관리
 - 금액별 로또 생성
-- 당첨결과
-- 
+
+# LottoMachine
+- 당첨관리
+- 수익률관리
